@@ -1,0 +1,15 @@
+@import '~bootstrap/scss/bootstrap-grid.scss';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 100%;
+}
+body {
+    background-color: #1e2d3b;
+}
+#app {
+    font-family: 'Roboto', sans-serif;
+}
