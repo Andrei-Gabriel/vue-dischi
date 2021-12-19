@@ -1,7 +1,12 @@
 <template>
     <section class="list-container">
-        <div class="card" v-for="(album, index) in albums" :key="index">
-            <Card :info="album"/>
+        <div v-if="albums != null" class="contain">
+            <div class="card" v-for="(album, index) in albums" :key="index">
+                <Card :info="album"/>
+            </div>  
+        </div>
+        <div v-else class="loader">
+            Loading
         </div>
     </section>
 </template>
@@ -30,7 +35,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-    .list-container {
+    .contain {
         width: 1200px;
         margin: 30px auto;
         display: flex;
@@ -45,5 +50,9 @@ export default {
         margin: 10px 20px;
         background-color: #2e3a46;
         }
+    }
+    .loader {
+        color: white;
+        font-size: 50px;
     }
 </style>
